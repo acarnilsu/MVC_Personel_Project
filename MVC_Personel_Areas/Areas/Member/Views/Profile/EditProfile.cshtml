@@ -8,17 +8,16 @@
 
 <form method="post">
     <label>ID</label>
-    @Html.TextBoxFor(x => x.MemberID)
+    @Html.TextBoxFor(x => x.MemberID, new { @class = "form-control ",@readonly="" })
     <br />
     <label>Ad</label>
-    @Html.TextBoxFor(x => x.MemberName)
+    @Html.TextBoxFor(x => x.MemberName, new { @class="form-control"})
     <br />
     <label>Soyad</label>
-    @Html.TextBoxFor(x => x.MemberSurname)
+    @Html.TextBoxFor(x => x.MemberSurname, new { @class = "form-control" })
     <br />
     <label>Şifre</label>
-    @Html.TextBoxFor(x => x.MemberPassword)
+    @Html.TextBoxFor(x => x.MemberPassword, new { @class = "form-control" })
     <br />
-
     <button class="btn btn-primary">Güncelle</button>
 </form>
