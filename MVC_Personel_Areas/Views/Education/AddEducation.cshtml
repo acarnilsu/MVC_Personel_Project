@@ -1,0 +1,21 @@
+﻿@model MVC_Personel_Areas.Models.TblEducation
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim Ekle</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.EducationTitle, new { @class = "form-control" })
+    <br />
+    <label>Tarih</label>
+    @Html.TextBoxFor(x => x.EducationDate, new { @class = "form-control" })
+    <br />
+    <label>Tanımlama</label>
+    @Html.TextBoxFor(x => x.EducationDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+

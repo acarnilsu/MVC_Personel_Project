@@ -1,0 +1,24 @@
+﻿@model MVC_Personel_Areas.Models.TblFeature
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Özellik Güncelleme</h2>
+
+<form method="post">
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.FeatureID, new { @class = "form-control", @readonly = "" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+    <br />
+    <label>Tarih</label>
+    @Html.TextBoxFor(x => x.FeatureLogo, new { @class = "form-control" })
+    <br />
+    <label>Tanımlama</label>
+    @Html.TextBoxFor(x => x.FeatureDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

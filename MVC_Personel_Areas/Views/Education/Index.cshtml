@@ -1,0 +1,30 @@
+﻿@model List<MVC_Personel_Areas.Models.TblEducation>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim Durumu</h2>
+<table class="table table-bordered">
+    <tr>
+        <td>#</td>
+        <td>Başlık</td>
+        <td>Tarih</td>
+        <td>Tanımlama</td>
+        <td>Sil</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EducationID</td>
+            <td>@item.EducationTitle</td>
+            <td>@item.EducationDate</td>
+            <td>@item.EducationDescription</td>
+            <td><a href="/Education/DeleteEducation/@item.EducationID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Education/UpdateEducation/@item.EducationID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Education/AddEducation/" class="btn btn-primary">Yeni Eğitim Ekle</a>

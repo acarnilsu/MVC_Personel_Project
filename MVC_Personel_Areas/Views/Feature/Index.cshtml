@@ -1,0 +1,32 @@
+﻿@using MVC_Personel_Areas.Models
+@model List<TblFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Özellik Listem</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Logo</th>
+        <th>Tanımlama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FeatureID</td>
+            <td>@item.FeatureTitle</td>
+            <td><img src="@item.FeatureLogo"width="50"  height="auto"/></td>
+            <td>@item.FeatureDescription</td>
+            <td><a href="/Feature/DeleteFeature/@item.FeatureID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Feature/UpdateFeature/@item.FeatureID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Feature/AddFeature/" class="btn btn-primary">Yeni Özellik Ekle</a>
+
+

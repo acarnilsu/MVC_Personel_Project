@@ -1,0 +1,20 @@
+﻿@model MVC_Personel_Areas.Models.TblFeature
+@{
+    ViewBag.Title = "AddFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Özellik Ekle</h2>
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+    <br />
+    <label>Logo</label>
+    @Html.TextBoxFor(x => x.FeatureLogo, new { @class = "form-control" })
+    <br />
+    <label>Tanımlama</label>
+    @Html.TextBoxFor(x => x.FeatureDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+

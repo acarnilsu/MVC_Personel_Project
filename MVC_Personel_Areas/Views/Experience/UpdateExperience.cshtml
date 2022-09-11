@@ -1,0 +1,23 @@
+﻿@model MVC_Personel_Areas.Models.TblExperience
+@{
+    ViewBag.Title = "UpdateExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Deneyim Güncelleme</h2>
+
+<form method="post">
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ExperienceID, new { @class = "form-control",@readonly="" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.ExperienceTitle, new { @class = "form-control" })
+    <br />
+    <label>Tarih</label>
+    @Html.TextBoxFor(x => x.ExperienceDate, new { @class = "form-control" })
+    <br />
+    <label>Tanımlama</label>
+    @Html.TextBoxFor(x => x.ExperienceDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
